@@ -1,7 +1,5 @@
 const acorn = require('acorn');
 const fs = require('fs');
-
-
 // Path to the file you want to read
 const filePath = 'resources/input.txt';
 let text;
@@ -55,7 +53,7 @@ function displayAST(node, indent) {
 }
 
 function getValue(node, code) {
-    if (node.type === 'UnaryExpression' || node.type === "BinaryExpression") {
+    if (node.type === 'UnaryExpression' || node.type === "BinaryExpression" || node.type === "AssignmentExpression") {
         return "operator " + node.operator;
     }
     if (node.type === 'Identifier' || node.type === 'Literal') {
