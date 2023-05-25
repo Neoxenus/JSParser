@@ -53,7 +53,7 @@ function displayAST(node, indent) {
 }
 
 function getValue(node, code) {
-    if (node.type === 'UnaryExpression' || node.type === "BinaryExpression" || node.type === "AssignmentExpression") {
+    if (node.operator !== undefined) {
         return "operator " + node.operator;
     }
     if (node.type === 'Identifier' || node.type === 'Literal') {
