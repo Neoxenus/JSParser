@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "acorn": "^8.8.2",
+    "fs": "^0.0.1-security"
+  }
+}
